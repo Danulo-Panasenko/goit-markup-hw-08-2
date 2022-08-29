@@ -2,6 +2,9 @@
 
 .clients {
   padding: 94px 0px;
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0px;
+  }
 
   &__title {
     @include title;
@@ -23,7 +26,7 @@
   }
 }
 
-.clients-icon__item{
+.clients-icon__item {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-basis: calc((100% - 120px) / 3);
     margin: 15px;

@@ -1,12 +1,15 @@
 /* Container + Header + Site nav */
 
 .header {
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
   padding: 25px 0px;
 
   &__container {
     display: flex;
     align-items: center;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 16px 0px;
   }
 }
 
@@ -26,7 +29,7 @@
 .contacts__item:not(:last-child) {
   @media screen and(max-width: 1199px) {
     margin-bottom: 12px;
-  }  
+  }
   @media screen and (min-width: 1200px) {
     margin-right: 50px;
   }
@@ -40,9 +43,9 @@
   transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--cubic);
-  
+
   &:hover,
-  &:focus{
+  &:focus {
     color: var(--accent-color);
   }
 }
@@ -107,7 +110,7 @@
   @media screen and(min-width: 768px) {
     display: block;
   }
-  
+
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -136,10 +139,9 @@
 .nav__link--animation:focus::after {
   @media screen and(min-width: 768px) {
     width: 100%;
-    left: 0; 
+    left: 0;
   }
 }
-
 
 .nav__link--current::after {
   content: "";
@@ -163,7 +165,7 @@
   margin-left: auto;
   z-index: 10;
   transition: fill var(--transition-duration) var(--cubic);
-  
+
   &:hover,
   &:focus {
     fill: var(--accent-color);
@@ -239,22 +241,22 @@
 
   &:hover,
   &:focus {
-    color: var(--accent-color)
+    color: var(--accent-color);
   }
 
-  &--current.current::before {
-    content: "";
-    height: 4px;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -20px;
-    border-radius: 2px;
-    background-color: var(--accent-color);
-  }
+  //&--current.current::before {
+  //  content: "";
+  //  height: 4px;
+  //  width: 100%;
+  //  position: absolute;
+  //  left: 0;
+  //  bottom: -20px;
+  //  border-radius: 2px;
+  //  background-color: var(--accent-color);
+  //}
 
-  &--current.current{
-    color: var(--accent-color)
+  &--current.current {
+    color: var(--accent-color);
   }
 }
 
@@ -274,13 +276,24 @@
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
-  transition: font-size var(--transition-duration) var(--cubic), color var(--transition-duration) var(--cubic);
+  transition: font-size var(--transition-duration) var(--cubic),
+    color var(--transition-duration) var(--cubic);
 
   &:hover,
-  &:focus{
+  &:focus {
     color: var(--accent-color);
     font-size: 34px;
   }
+}
+.mobile-contacts__link--tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  transition: font-size var(--transition-duration) var(--cubic),
+    color var(--transition-duration) var(--cubic);
+  font-weight: 500;
 }
 
 .mobile-social__list {
@@ -313,7 +326,7 @@
   position: relative;
 
   &:hover,
-  &:focus{
+  &:focus {
     color: var(--accent-color);
   }
 }
